@@ -5,6 +5,6 @@ import WorkoutReducer from './WorkoutReducer';
 //second
 export default combineReducers({
     exercises: ExerciseReducer,
-    //exerciseCards: ExerciseCardReducer,
+    exerciseCards: ExerciseCardReducer,
     //workouts: WorkoutReducer
 });

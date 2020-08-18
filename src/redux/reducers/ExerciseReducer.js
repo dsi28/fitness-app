@@ -1,6 +1,6 @@
-import { ADD_EXTERCISES, ADD_EXTERCISE } from './ActionTypes';
+import { ADD_EXTERCISES, ADD_EXTERCISE } from '../ActionTypes';
 
-//fith
+//fifth
 
 const initialState = {
     exercises: []
