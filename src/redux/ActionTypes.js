@@ -1,5 +1,5 @@
 //third
-export const ADD_EXTERCISES = 'ADD_EXTERCISES';// call this in componentdidmount of mainComponent?
+export const ADD_EXTERCISES = 'ADD_EXTERCISES';
 export const ADD_EXTERCISE = 'ADD_EXTERCISE';
 
 export const ADD_EXTERCISECARDS = 'ADD_EXTERCISECARDS';
