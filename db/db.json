@@ -1,0 +1,112 @@
+{
+  "exercise": [
+    {
+      "id": 0,
+      "name": "Bench Press",
+      "image": "images/",
+      "type": "primary",
+      "primaryType": "chest"
+    },
+    {
+      "id": 1,
+      "name": "Incline Press",
+      "image": "images/",
+      "type": "primary",
+      "primaryType": "chest"   
+    },
+    {
+      "id": 2,
+      "name": "Decline Press",
+      "image": "images/",
+      "type": "primary",
+      "primaryType": "chest"
+    },
+    {
+      "id": 3,
+      "name": "Jog",
+      "image": "images/",
+      "type": "warmup"
+    },
+    {
+      "id": 4,
+      "name": "Jump rope",
+      "image": "images/",
+      "type": "warmup"
+    },
+    {
+      "id": 5,
+      "name": "Hamstring",
+      "image": "images/",
+      "type": "stretch"
+    },
+    {
+      "id": 6,
+      "name": "Glute release",
+      "image": "images/",
+      "type": "stretch"
+    },
+    {
+      "id": 7,
+      "name": "Squat",
+      "image": "images/",
+      "type": "primary",
+      "primaryType": "legs"
+    },
+    {
+      "id": 8,
+      "name": "Leg extentions",
+      "image": "images/",
+      "type": "primary",
+      "primaryType": "legs"
+    },    
+    {
+      "id": 9,
+      "name": "Calf raises",
+      "image": "images/",
+      "type": "primary",
+      "primaryType": "legs"
+    }
+  ],
+  "exerciseCard": [
+    {
+      "id": 0,
+      "card": [0, 1, 2],
+      "type": "primary",
+      "primaryType": "chest"
+    },
+    {
+      "id": 1,
+      "card": [7, 8, 9],
+      "type": "primary",
+      "primaryType": "legs"
+    },
+    {
+      "id": 2,
+      "card": [3, 4],
+      "type": "warmup"
+    },
+    {
+      "id": 3,
+      "card": [5, 6],
+      "type": "stretch"
+    }
+  ],
+  "workout": [
+    {
+      "id": 0,
+      "name": "Chest workout 1",
+      "image": "images/",
+      "warmupCard": 2,
+      "primaryCard": 0,
+      "stretchCard": 3
+    },
+    {
+      "id": 1,
+      "name": "Leg workout 1",
+      "image": "images/",
+      "warmupCard": 2,
+      "primaryCard": 1,
+      "stretchCard": 3
+    }
+  ]
+}
