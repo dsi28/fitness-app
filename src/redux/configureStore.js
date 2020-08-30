@@ -9,3 +9,4 @@ const configureStore = createStore(
     initialState,
     applyMiddleware(...middleware)
 );
+export default configureStore;
