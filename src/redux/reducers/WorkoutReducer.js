@@ -6,11 +6,10 @@ const initialState = {
 export default (state = initialState, action) => {
     switch (action.type) {
         case ADD_WORKOUTS:
-            return{ ...state, workouts: payload}
-            break;
+            return{ ...state, workouts: action.payload}
         case ADD_WORKOUT:
-            return{ ...state, workouts: state.workouts.concat(payload)}
+            return{ ...state, workouts: state.workouts.concat(action.payload)}
         default:
-            break;
+            return state;
     }
 }

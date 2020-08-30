@@ -1,10 +1,13 @@
 import React, {Component} from 'react';
 
-class Main extends Component{
+import Login from './LoginComponent';
 
+class Main extends Component{
     render(){
         return(
-            <>Test</>
+            <>
+                <Login/>
+            </>
         )
     }
 }
