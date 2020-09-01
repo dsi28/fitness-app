@@ -9,7 +9,7 @@ class Home extends Component {
 	render() {
 		return (
 			<>
-				<Link to={`/login`}>
+				<Link to={`/createworkout`}>
 					<button onClick={() => this.handleCreateWorkoutClick()} >Create Workout</button>
 				</Link>
 			</>

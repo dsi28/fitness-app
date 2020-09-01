@@ -9,6 +9,7 @@ class Header extends Component {
 				<nav>
 					<Link to='/'>Home</Link>
 					<Link to='/login'>Login</Link>
+					<Link to='/createworkout'> CreateWorkout</Link>
 				</nav>
 				<h3>End header</h3>
 			</>
