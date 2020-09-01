@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
 
-import Login from './LoginComponent';
-import Home from './HomeComponent';
 import Header from './HeaderComponent';
 import Footer from './FooterComponent';
+import router from '../shared/router';
 
 
 class Main extends Component{
@@ -11,13 +10,10 @@ class Main extends Component{
         return(
             <>
                 <Header/>
-                <Login/>
-                <Home/>
+                {router}
                 <Footer/>
             </>
         )
     }
 }
-
-
 export default Main;
