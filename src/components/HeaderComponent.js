@@ -1,4 +1,4 @@
-import React,  { useState, Component} from 'react';
+import React,  {Component} from 'react';
 import {
   Collapse,
   Navbar,
@@ -6,22 +6,13 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText
+  NavLink
 } from 'reactstrap';
  class Header extends Component{
 
 state = {
 	isOpen:  false
 }
-
-//   const [isOpen, setIsOpen] = useState(false);
-
-//   const toggle = () => setIsOpen(!isOpen);
  toggleHandler = () => {
 	 this.setState({isOpen:!this.state.isOpen})
  }
