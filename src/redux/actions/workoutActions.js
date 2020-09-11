@@ -3,7 +3,7 @@ import * as ActionTypes from '../ActionTypes';
 //TODO gets workouts from db 
 //using dispatch calls addWorkouts()
 export const getWorkouts = () => (dispatch) => {
-
+    
 }
 
 //sends workouts to reducer so state can be updated
