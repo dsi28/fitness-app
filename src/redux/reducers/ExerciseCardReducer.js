@@ -1,22 +1,18 @@
-import { ADD_EXTERCISECARDS, ADD_EXTERCISECARD } from '../ActionTypes';
+import { ADD_EXTERCISECARDS, ADD_EXTERCISECARD } from "../ActionTypes";
 // 5th step
 const initialState = {
-    exerciseCards : []
-}
+  exerciseCards: [],
+};
 export default (state = initialState, action) => {
-    switch (action.type) {
-        case ADD_EXTERCISECARDS:
-            return {...state, exerciseCards: action.payload}
-        case ADD_EXTERCISECARD:
-            return {...state, exerciseCards: state.exerciseCards.concate(action.payload)}
-        default:
-            return state;
-    }
-}
-// if (Action.type == ADD_EXTERCISECARDS){ 
-//     return{...state, exerciseCards: action.payload}
-// }
-// else if (Action.type = ADD_EXTERCISECARD)
-// {
-// return {...state, exerciseCards: state.exerciseCards.concate(action.payload)}
-// };
+  switch (action.type) {
+    case ADD_EXTERCISECARDS:
+      return { ...state, exerciseCards: action.payload };
+    case ADD_EXTERCISECARD:
+      return {
+        ...state,
+        exerciseCards: state.exerciseCards.concate(action.payload),
+      };
+    default:
+      return state;
+  }
+};

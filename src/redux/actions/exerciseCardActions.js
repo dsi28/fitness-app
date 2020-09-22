@@ -1,7 +1,6 @@
 import * as ActionTypes from "../ActionTypes";
 //4th Steps
 
-//TODO get exercise cards from db
 //via dispatch call the addexercisecards()
 export const getExerciseCards = () => (dispatch) => {
   return fetch(baseUrl + "exerciseCard")
@@ -36,7 +35,6 @@ export const addExerciseCards = (exerciseCards) => ({
   payload: exerciseCards,
 });
 
-// TODO add exerciseCardID card to db
 // call addExterciseCard() via dispatch
 export const createExerciseCard = (exerciseCard) => (dispatch) => {
   return fetch(baseUrl + "exerciseCard", {
