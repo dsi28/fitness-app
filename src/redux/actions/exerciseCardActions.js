@@ -1,5 +1,6 @@
 import * as ActionTypes from "../ActionTypes";
-//4th Steps
+import { baseUrl } from "../../shared/baseUrl";
+//4th Step
 
 //via dispatch call the addexercisecards()
 export const getExerciseCards = () => (dispatch) => {

@@ -1,4 +1,5 @@
 import * as ActionTypes from "../ActionTypes";
+import { baseUrl } from "../../shared/baseUrl";
 
 //using dispatch calls addWorkouts()
 export const getWorkouts = () => (dispatch) => {
