@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { addUserWorkout } from "../redux/actions/userActions";
 
 class CreateWorkout extends Component {
   handleCreateWorkoutSubmit = (e) => {
     e.preventDefault();
     console.log(e.target.workoutList.value);
+    addUserWorkout(e.target.workoutList.value);
   };
   render() {
     const workouts = this.props.workouts.workouts.map((workout) => (
@@ -26,11 +28,15 @@ class CreateWorkout extends Component {
     );
   }
 }
-const mapStateToProps = (state) => ({
-  exercises: state.exercises,
-  exerciseCards: state.exerciseCards,
-  workouts: state.workouts,
-  user: state.user,
-});
-
-export default connect(mapStateToProps, null)(CreateWorkout);
+const mapStateToProps = (state) => {
+  return {
+    exercises: state.exercises,
+    exerciseCards: state.exerciseCards,
+    workouts: state.workouts,
+    user: state.user,
+  };
+};
+const mapDispatchToProps = {
+  addUserWorkout,
+};
+export default connect(mapStateToProps, mapDispatchToProps)(CreateWorkout);

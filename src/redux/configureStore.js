@@ -1,12 +1,26 @@
-import { createStore, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
-import reducer from './reducers/reducer';
+import { createStore, applyMiddleware } from "redux";
+import thunk from "redux-thunk";
+import logger from "redux-logger";
+import { throttle } from "lodash/throttle";
+
+import reducer from "./reducers/reducer";
+import { loadState, saveState } from "./localStorage";
+
+const persistedState = loadState();
+
 //first
-const initialState = {};
-const middleware = [thunk];
+//const initialState = {};
+const middleware = [thunk, logger];
 const configureStore = createStore(
-    reducer,
-    initialState,
-    applyMiddleware(...middleware)
+  reducer,
+  persistedState,
+  applyMiddleware(...middleware)
 );
+
+configureStore.subscribe(() => {
+  saveState({
+    user: configureStore.getState().user,
+  });
+});
+
 export default configureStore;
