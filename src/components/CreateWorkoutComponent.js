@@ -3,14 +3,25 @@ import { connect } from "react-redux";
 import { addUserWorkout } from "../redux/actions/userActions";
 
 class CreateWorkout extends Component {
+  state = {
+    selectWorkout: "",
+  };
   handleCreateWorkoutSubmit = (e) => {
     e.preventDefault();
-    console.log(e.target.workoutList.value);
-    addUserWorkout(e.target.workoutList.value);
+    if (this.state.selectWorkout === "") {
+      const workout = JSON.stringify(this.props.workouts.workouts[0]);
+      this.props.addUserWorkout(workout);
+    } else {
+      this.props.addUserWorkout(this.state.selectWorkout);
+    }
+  };
+  handleOptionChange = (e) => {
+    console.log(e.target.value);
+    this.setState({ selectWorkout: e.target.value });
   };
   render() {
     const workouts = this.props.workouts.workouts.map((workout) => (
-      <option key={workout.id} value={workout}>
+      <option key={workout.id} value={JSON.stringify(workout)}>
         {workout.name}
       </option>
     ));
@@ -19,7 +30,12 @@ class CreateWorkout extends Component {
         <h1>-{this.props.user.username}</h1>
         <h1>CreateWorkout Component</h1>
         <form onSubmit={(e) => this.handleCreateWorkoutSubmit(e)}>
-          <select name="workoutList" id="workoutList">
+          <select
+            name="workoutList"
+            id="workoutList"
+            value={this.state.selectWorkout}
+            onChange={(e) => this.handleOptionChange(e)}
+          >
             {workouts}
           </select>
           <button>Get Started!</button>
